@@ -1,0 +1,155 @@
+@mixin mobile
+  @media (max-width: #{950px})
+      @content
+    
+*, *:before, *:after
+    box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    text-size-adjust: none
+
+footer, header, nav, section, main
+    display: block
+
+body
+    line-height: 1
+
+ol, ul
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+    content: ''
+    content: none
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+input
+    -webkit-appearance: none
+    border-radius: 0
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@500&display=swap')
+$sideWidth: 300px
+$rightWidth: 500px
+
+body
+    font-family: 'Roboto', sans-serif
+    h1,h2
+        font-family: 'Ubuntu', sans-serif
+    a
+        color: black
+        &:visited
+            color: black
+    #sideBar
+        width: $sideWidth
+        padding: 1em
+        height: 100vh
+        position: fixed
+        left: 0
+        border-right: 1px dashed
+        top: 0
+        background-color: white
+        z-index: 2
+        @include mobile
+            height: 150px
+            width: 100vw
+            border-right: 0px
+            border-bottom: 1px dashed
+        h2
+            margin-top: 1em
+            font-weight: 800
+            display: block
+            font-size: 1.25em
+            @include mobile
+                margin-top: .25em
+                font-size: 1em
+        img
+            width: 100%
+            image-rendering: optimizeSpeed
+            image-rendering: -moz-crisp-edges
+            image-rendering: -o-crisp-edges
+            image-rendering: -webkit-optimize-contrast
+            image-rendering: -o-pixelated
+            image-rendering: pixelated
+            image-rendering: optimize-contrast
+            -ms-interpolation-mode: nearest-neighbor
+            @include mobile
+                width: calc(150px - 2em)
+        #infoBox
+            @include mobile
+                display: inline-block
+                width: calc(100vw - 150px - 2em)
+                position: absolute
+                margin-left: 1em
+            p
+                margin-top: .25em
+    #content
+        height: 100vh
+        display: block
+        margin-left: $sideWidth
+        @include mobile
+            height: calc(100vh - 150px)
+            margin-left: 0
+            margin-top: 150px
+.projBlock
+    margin: 0 1em 1em 0
+    width: $rightWidth
+    position: relative
+    padding-bottom: 2em
+    border: 1px dashed
+    background-color: white
+    @include mobile
+        width: 100%
+    i
+        position: absolute
+        right: 1em
+        width: 2.5em
+        text-align: center
+    h3
+        display: inline-block
+        font-weight: 800
+        margin-bottom: .25em
+        padding-right: 2.5em
+    span
+        display: block
+        padding-right: 2.5em
+        margin-top: 1em
+        b
+            font-weight: 800
+    .repoLink
+        display: block
+        margin-top: 1em
+        padding-right: 2.5em
+        position: absolute
+        bottom: 1em
+    p
+        margin-bottom: .25em
+        padding-right: 2.5em
+    img
+        width: 100%
+#projList
+    display: flex
+    flex-wrap: wrap
+    justify-content: end
+    padding: 1em 1em 0 1em
+#filterBar
+    padding: 1em
+    width: 100%
+    border-bottom: 1px dashed black
+    
+.hidden
+    display: none !important
+.blockWrap
+    padding: 1em

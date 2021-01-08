@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Colin Buffum</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <div id="sideBar">
+      <img src="pic.png" alt="My Son and Me" />
+      <div id="infoBox">
+        <h2>Colin Buffum</h2>
+        <p>
+          fullstack web developer looking to create interesting and unique
+          experiences for the web.
+        </p>
+        <h2>
+          <a
+            href="https://docs.google.com/document/d/1mYZlAOAiPwl5ZGgLc8AMOmHq67FWNGSpXy2-iDtc8wU/edit?usp=sharing"
+            >Resume</a
+          >
+        </h2>
+        <h2>Work With Me</h2>
+        <p>colin.buffum@gmail.com</p>
+      </div>
+    </div>
+    <div id="content">
+      <div id="filterBar">
+        <label for="theBar">Filter By Technology:</label>
+        <select name="theBar" id="theBar" onchange="filterSet(this)">
+          <option value="all"></option>
+        </select>
+      </div>
+      <div id="projList">
+        You need to have Javascript enabled to load my list of projects. If you
+        don't want to enabled Javascript, that's alright. Check out my resume
+        though okay?
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="projectInfo.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</html>
