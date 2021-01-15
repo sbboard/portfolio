@@ -76,7 +76,7 @@ function checkSidebar() {
         var padding = parseInt(getStyle(document.getElementById("sideBar"), "padding-top"));
         var trueInfoHeight = infoBoxHeight + padding;
         //console.log(`infoBox: ${trueInfoHeight}, sideBar: ${sidebarHeight}`)
-        if (trueInfoHeight >= 150) {
+        if (trueInfoHeight >= 150 && document.getElementById("sideBar")) {
             document.getElementById("sideBar").style.height =
                 trueInfoHeight + padding + "px";
             document.getElementById("content").style.marginTop =

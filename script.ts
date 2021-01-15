@@ -1,13 +1,29 @@
-let allProjs = [];
+let allProjs: Element[] = [];
 let projRecord: {x: number, y: number, moving: boolean}[];
-let techList = [];
-//data from project
-declare const data
-//from tweenmax
-declare const TweenMax
-declare const Power1
+let techList: string[] = [];
 
-function getStyle(oElm, strCssRule) {
+interface DataFormat {
+  name: string;
+  img: string;
+  url: string;
+  date: string;
+  frontend: boolean;
+  repo: string;
+  tech: string[];
+  description: string;
+}
+
+interface ProjectObject {
+  projects: DataFormat[]
+}
+
+//data from project
+declare const data: ProjectObject
+//from tweenmax
+declare const TweenMax: any
+declare const Power1: any
+
+function getStyle(oElm: HTMLElement, strCssRule: string) {
   var strValue = "";
   if (document.defaultView && document.defaultView.getComputedStyle) {
     strValue = document.defaultView
@@ -68,7 +84,7 @@ function loadProjects() {
     text += `</div></div>`;
   }
   //pump in and transition elements
-  document.getElementById("projList").innerHTML = text;
+  document.getElementById("projList").innerHTML = text
   TweenMax.staggerFrom(".projBlock", 0.75, { opacity: 0, delay: 0.5 }, 0.1);
 
   allProjs = Array.from(document.querySelectorAll(".projBlock"))
@@ -78,7 +94,7 @@ function loadProjects() {
   let optionBar = document.getElementById("theBar") as HTMLSelectElement
   techList.sort();
   for (let a = 0; a < techList.length; a++) {
-    var option = document.createElement("option");
+    var option = document.createElement("option") as HTMLOptionElement
     option.text = techList[a];
     optionBar.add(option);
   }
@@ -93,7 +109,7 @@ function checkSidebar() {
     );
     let trueInfoHeight = infoBoxHeight + padding;
     //console.log(`infoBox: ${trueInfoHeight}, sideBar: ${sidebarHeight}`)
-    if (trueInfoHeight >= 150) {
+    if (trueInfoHeight >= 150 && document.getElementById("sideBar")) {
       document.getElementById("sideBar").style.height =
         trueInfoHeight + padding + "px";
       document.getElementById("content").style.marginTop =
