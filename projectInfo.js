@@ -22,16 +22,6 @@ let data = {
       description: "Homepage for the band 'The Invisible Sundial'.",
     },
     {
-      name: "My Portfolio (you're on this now)",
-      url: "#",
-      img: "sun.jpg",
-      date: "11/10/2020",
-      frontend: true,
-      repo: "https://github.com/sbboard/portfolio",
-      tech: ["HTML5/CSS3", "Typescript"],
-      description: "It's my portfolio. The thing you're on now.",
-    },
-    {
       name: "1000 Tapes of Fate",
       url: "http://1000tapes.com/",
       img: "tapes.jpg",
