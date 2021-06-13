@@ -4,15 +4,20 @@
   "description": "",
   "main": "projectInfo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "sass": "sass --watch style.sass:style.css",
+    "minify": "uglifyjs -c -m --keep-fnames -o script.min.js -- script.js",
+    "postcss": "postcss style.css --use autoprefixer -r"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "postcss": "^8.3.2",
+    "postcss-cli": "^8.3.1"
   },
   "dependencies": {
-    "gsap": "^3.5.1"
+    "autoprefixer": "^10.2.6",
+    "gsap": "^3.6.1"
   }
 }

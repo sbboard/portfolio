@@ -26,7 +26,7 @@ let data = {
       img: "sun.jpg",
       date: "01/1/2021",
       repo: "https://github.com/sbboard/invisibleSundial",
-      tech: ["HTML5/CSS3", "Javascript", "Wordpress", "PHP"],
+      tech: ["HTML5/CSS3", "Javascript", "WordPress", "PHP"],
       description: "Homepage for the band 'The Invisible Sundial'.",
     },
     {
