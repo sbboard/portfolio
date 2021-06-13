@@ -7,6 +7,7 @@
     "dev": "lite-server",
     "sass": "sass --watch style.sass:style.css",
     "minify": "uglifyjs -c -m --keep-fnames -o script.min.js -- script.js",
+    "minifyInfo": "uglifyjs -c -m --keep-fnames -o projectInfo.min.js -- projectInfo.js",
     "postcss": "postcss style.css --use autoprefixer -r"
   },
   "author": "",
