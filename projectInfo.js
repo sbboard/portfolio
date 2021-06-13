@@ -1,6 +1,26 @@
 let data = {
   projects: [
     {
+      name: "Bubble Menu",
+      img: "generis.jpg",
+      url: "https://sbboard.github.io/bubbleEngine/",
+      date: "5/1/2021",
+      repo: "https://github.com/sbboard/bubbleEngine",
+      tech: ["Javascript"],
+      description:
+        "Demo for an animated bubble menu.",
+    },
+    {
+      name: "Wellness Quiz",
+      img: "iwg.jpg",
+      url: "https://sbboard.github.io/quizEngine/",
+      date: "5/15/2021",
+      repo: "https://github.com/sbboard/quizEngine",
+      tech: ["Javascript"],
+      description:
+      "Interactive assessment quiz to help assign customers to specific programs.",
+    },
+    {
       name: "PC-98 Bot",
       img: "pc98.jpg",
       url: "https://twitter.com/PC98_bot",
@@ -16,7 +36,7 @@ let data = {
       url: "https://gang-fight.com/projects/warmup/",
       date: "2/1/2021",
       repo: "https://github.com/sbboard/warmup",
-      tech: ["HTML5/CSS3","Typescript"],
+      tech: ["HTML5/CSS3", "Typescript"],
       description:
         "Simple drawing practice tool. Displays local images for a set number of minutes.",
     },
@@ -66,8 +86,7 @@ let data = {
       date: "2/18/18",
       tech: ["HTML5/CSS3", "Javascript", "PHP", "JQuery Mobile"],
       repo: null,
-      description:
-        "Portfolio website for an advertising creative.",
+      description: "Portfolio website for an advertising creative.",
     },
     {
       name: "Curosity Museum Exhibit Prototype",
@@ -114,8 +133,7 @@ let data = {
       img: "picross.jpg",
       date: "2/3/20",
       tech: ["HTML5/CSS3", "Javascript", "Vue.js"],
-      repo:
-        "https://github.com/sbboard/gangfight/blob/master/src/components/projects/picross.vue",
+      repo: "https://github.com/sbboard/gangfight/blob/master/src/components/projects/picross.vue",
       description: "Simple nonogram game engine.",
     },
   ],
